@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "wcs-bears"
+    }
+  },
+  "defaultProject": "wcs-bears",
+  "cli": {
+    "analytics": false
+  }
 }
