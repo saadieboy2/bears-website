@@ -5,7 +5,7 @@
 </style>
 <style>
   .gm-style img{max-width: none;}.gm-style {font: 400 11px Roboto, Arial, sans-serif; text-decoration: none;}</style>
-  
+
   <style class="vjs-styles-defaults">
     .video-js {
       width: 300px;
@@ -32,7 +32,7 @@
     <meta name="twitter:description" content="Keep public lands in public hands. Protect Bears Ears National Monument and its millions of acres of world-class recreation, archeology, and culture.">
     <meta name="twitter:image" content="http://bearsears.patagonia.com/assets/share.jpg">
     <meta name="description" content="Keep public lands in public hands. Protect Bears Ears National Monument and its millions of acres of world-class recreation, archeology, and culture.">
-    
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <script type="text/javascript" id="www-widgetapi-script" src="https://s.ytimg.com/yts/jsbin/www-widgetapi-vflTYbF0I/www-widgetapi.js" async=""></script><script src="https://www.youtube.com/iframe_api"></script><script src="https://www.youtube.com/iframe_api"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script>
@@ -51,7 +51,7 @@
     <header ng-class="{'is-visible': headerVisible, 'is-enabled': headerEnabled}" ng-controller="headerController" class="ng-scope">
       <div class="header--left" ng-class="{'is-hidden': experienceActive}">
         <a class="logo" href="#" title="Patagonia" ng-click="goHome($event)">
-          <img src="http://bearsears.patagonia.com/assets/icons/patagonia_logo.svg" alt="Patagonia">
+          <img src="/assets/cards/icons/wcs.svg" alt="World Credit Savings">
         </a>
         <div class="breadcrumbs ng-scope" ng-controller="breadcrumbController" ng-class="{'is-visible': showBreadcrumbs}">
           <!-- ngRepeat: crumb in crumbs --><a class="fade ng-binding ng-scope" ng-click="visit(crumb.link)" ng-repeat="crumb in crumbs">Bears Ears</a><!-- end ngRepeat: crumb in crumbs -->
@@ -70,40 +70,41 @@
     </header>
 
     <div class="container">
-      
+
 
   <div class="menu ng-scope" ng-controller="menuController" ng-class="{'is-active': menuActive}">
-  <div class="menu-main" ng-class="{'is-active': (active == 'main'), 'is-moving-between': movingBetween}">
-    <div class="menuContainer">
-      <!-- ngRepeat: item in main --><a href="http://bearsears.patagonia.com/culture" ng-click="visit($event)" class="menuItem ng-scope" ng-repeat="item in main">
+    <div class="menu-main" ng-class="{'is-active': (active == 'main'), 'is-moving-between': movingBetween}" style="">
+      <div class="menuContainer">
+        <!-- ngRepeat: item in main --><a href="/culture" ng-click="visit($event)" class="menuItem ng-scope" ng-repeat="item in main" data-mouse-direction="left">
         <div class="menuItem-background">
-          <!-- ngIf: isMobile -->
-          <!-- ngIf: !isMobile --><div ng-if="!isMobile" ng-style="{'background-image': 'url(http://bearsears.patagonia.com/assets/cards/' + item.content.image + ')'}" class="ng-scope" style="background-image: url(&quot;http://bearsears.patagonia.com/assets/cards/01_culture.jpg&quot;);"></div><!-- end ngIf: !isMobile -->
+          <div ng-if="isMobile" ng-style="{'background-image': 'url(./assets/cards/mobile/' + item.content.image + ')'}"></div>
+          <div ng-if="!isMobile" ng-style="{'background-image': 'url(./assets/cards/' + item.content.image + ')'}"></div>
         </div>
         <div class="menuItem-content menuItem-content--base">
           <div class="menuItem-meta">
-            <span class="menuItem-number ng-binding">01</span>
+            <span class="menuItem-number">//item.content.number//</span>
             <div class="menuItem-bar"></div>
           </div>
-          <span class="menuItem-name ng-binding">Culture</span>
+          <span class="menuItem-name">//item.content.name//</span>
           <span class="menuItem-watched" ng-class="{'is-visible': item.watched}">Watched</span>
         </div>
 
         <div class="menuItem-content menuItem-content--hover">
           <div class="menuItem-container">
             <div class="menuItem-meta">
-              <span class="menuItem-number ng-binding">01</span>
-            <div class="menuItem-bar"></div>
+              <span class="menuItem-number">//item.content.number//</span>
+              <div class="menuItem-bar"></div>
             </div>
-            <span class="menuItem-name ng-binding">Culture</span>
-            <p class="menuItem-description ng-binding">The history of Bears Ears is written in rocks and sandstone walls.</p>
-            <div class="menuItem-link ng-binding">Explore</div>
+            <span class="menuItem-name">//item.content.name//</span>
+            <p class="menuItem-description">//item.content.description//</p>
+            <div class="menuItem-link">//item.content.cta ? item.content.cta : 'Explore'//</div>
           </div>
         </div>
-      </a><!-- end ngRepeat: item in main --><a href="http://bearsears.patagonia.com/sport" ng-click="visit($event)" class="menuItem ng-scope" ng-repeat="item in main">
+      </a>
+        <!-- end ngRepeat: item in main --><a href="/sport" ng-click="visit($event)" class="menuItem ng-scope" ng-repeat="item in main" data-mouse-direction="left">
         <div class="menuItem-background">
           <!-- ngIf: isMobile -->
-          <!-- ngIf: !isMobile --><div ng-if="!isMobile" ng-style="{'background-image': 'url(http://bearsears.patagonia.com/assets/cards/' + item.content.image + ')'}" class="ng-scope" style="background-image: url(&quot;http://bearsears.patagonia.com/assets/cards/02_sport.jpg&quot;);"></div><!-- end ngIf: !isMobile -->
+          <!-- ngIf: !isMobile --><div ng-if="!isMobile" ng-style="{'background-image': 'url(./assets/cards/' + item.content.image + ')'}" class="ng-scope" style="background-image: url(&quot;./assets/cards/02_sport.jpg&quot;);"></div><!-- end ngIf: !isMobile -->
         </div>
         <div class="menuItem-content menuItem-content--base">
           <div class="menuItem-meta">
@@ -111,24 +112,24 @@
             <div class="menuItem-bar"></div>
           </div>
           <span class="menuItem-name ng-binding">Sport</span>
-          <span class="menuItem-watched" ng-class="{'is-visible': item.watched}">Watched</span>
+          <span class="menuItem-watched is-visible" ng-class="{'is-visible': item.watched}" style="">Watched</span>
         </div>
 
         <div class="menuItem-content menuItem-content--hover">
           <div class="menuItem-container">
             <div class="menuItem-meta">
               <span class="menuItem-number ng-binding">02</span>
-            <div class="menuItem-bar"></div>
+              <div class="menuItem-bar"></div>
             </div>
             <span class="menuItem-name ng-binding">Sport</span>
             <p class="menuItem-description ng-binding">From trail runs on quiet mesas to expansive views from the top of talus towers, Bears Ears is as playful as it is reverent.</p>
             <div class="menuItem-link ng-binding">Explore</div>
           </div>
         </div>
-      </a><!-- end ngRepeat: item in main --><a href="http://bearsears.patagonia.com/take-action" ng-click="visit($event)" class="menuItem ng-scope" ng-repeat="item in main">
+      </a><!-- end ngRepeat: item in main --><a href="/take-action" ng-click="visit($event)" class="menuItem ng-scope" ng-repeat="item in main" data-mouse-direction="left">
         <div class="menuItem-background">
           <!-- ngIf: isMobile -->
-          <!-- ngIf: !isMobile --><div ng-if="!isMobile" ng-style="{'background-image': 'url(http://bearsears.patagonia.com/assets/cards/' + item.content.image + ')'}" class="ng-scope" style="background-image: url(&quot;http://bearsears.patagonia.com/assets/cards/03_action.jpg&quot;);"></div><!-- end ngIf: !isMobile -->
+          <!-- ngIf: !isMobile --><div ng-if="!isMobile" ng-style="{'background-image': 'url(./assets/cards/' + item.content.image + ')'}" class="ng-scope" style="background-image: url(&quot;./assets/cards/03_action.jpg&quot;);"></div><!-- end ngIf: !isMobile -->
         </div>
         <div class="menuItem-content menuItem-content--base">
           <div class="menuItem-meta">
@@ -143,7 +144,7 @@
           <div class="menuItem-container">
             <div class="menuItem-meta">
               <span class="menuItem-number ng-binding">03</span>
-            <div class="menuItem-bar"></div>
+              <div class="menuItem-bar"></div>
             </div>
             <span class="menuItem-name ng-binding">Take Action</span>
             <p class="menuItem-description ng-binding">Keep public lands in public hands. Protect Bears Ears.</p>
@@ -151,16 +152,16 @@
           </div>
         </div>
       </a><!-- end ngRepeat: item in main -->
-      <div class="controls-map">
-        <a href="http://bearsears.patagonia.com/map" class="controls-mapLink" ng-click="visit($event)">
-          <div class="controls-mapIcon" ng-style="{'background-image': 'url(http://bearsears.patagonia.com/assets/map/north_six_shooter.svg)'}" style="background-image: url(&quot;http://bearsears.patagonia.com/assets/map/north_six_shooter.svg&quot;);"></div>
-        </a>
+        <div class="controls-map">
+          <a href="/map" class="controls-mapLink" ng-click="visit($event)">
+            <div class="controls-mapIcon" ng-style="{'background-image': 'url(./assets/map/north_six_shooter.svg)'}" style="background-image: url(&quot;./assets/map/north_six_shooter.svg&quot;);"></div>
+          </a>
+        </div>
+        <div class="menu-overlay"></div>
+        <div class="menuTitle">This is Bears Ears<br><span class="t-strikethrough">National Monument</span></div>
+        <a href="/credits" class="menu-creditslink" ng-click="visit($event)">Credits</a>
       </div>
-      <div class="menu-overlay"></div>
-      <div class="menuTitle">This is Bears Ears<br><span class="t-strikethrough">National Monument</span></div>
-      <a href="http://bearsears.patagonia.com/credits" class="menu-creditslink" ng-click="visit($event)">Credits</a>
     </div>
-  </div>
 
   <div class="menu-full" ng-class="{'is-active': (active == 'full'), 'is-moving-between': movingBetween}">
     <div class="menu-arrow menu-arrow--left is-visible" ng-class="{'is-visible': showBack}">
@@ -204,10 +205,10 @@
             </div>
             <span class="menuItem-name ng-binding">Culture</span>
             <p class="menuItem-description ng-binding">The history of Bears Ears is written in rocks and sandstone walls.</p>
-            <div class="menuItem-link ng-binding" href="http://bearsears.patagonia.com/culture" ng-click="visit($event)">Explore</div>
+            <div class="menuItem-link ng-binding" href="/culture" ng-click="visit($event)">Explore</div>
           </div>
         </div>
-      </a><!-- end ngRepeat: item in full --><a class="menuItem ng-scope" href="http://bearsears.patagonia.com/escaping-places" ng-click="visit($event)" ng-repeat="item in full" ng-class="{'menuItem--firstTier' : item.level == 1}">
+      </a><!-- end ngRepeat: item in full --><a class="menuItem ng-scope" href="/escaping-places" ng-click="visit($event)" ng-repeat="item in full" ng-class="{'menuItem--firstTier' : item.level == 1}">
         <div class="menuItem-background">
           <!-- ngIf: isMobile -->
           <!-- ngIf: !isMobile --><div ng-if="!isMobile" ng-style="{'background-image': 'url(http://bearsears.patagonia.com/assets/cards/' + item.content.image + ')'}" class="ng-scope" style="background-image: url(&quot;http://bearsears.patagonia.com/assets/cards/11_escaping_places_intro.jpg&quot;);"></div><!-- end ngIf: !isMobile -->
@@ -761,7 +762,7 @@
   <section class="intro ng-scope is-active" ng-controller="introController" ng-class="{'is-active': active, 'is-controls-visible': (controlActive &amp;&amp; showControls || (currentState == 'paused'))}">
   <div class="intro-info is-active" ng-class="{'is-active': (showLoading || showMeta), 'is-done': introEnded}" style="">
     <div class="intro-loading" ng-class="{'is-active' : showLoading}" style="">
-      <img class="loading-logo" src="http://bearsears.patagonia.com/assets/icons/patagonia_logo.svg" alt="Patagonia">
+      <img class="loading-logo" src="assets/cards/icons/wcs.svg alt="World Credit Savings">
       <div class="loading-bear"></div>
     </div>
     <div class="intro-meta is-active" ng-class="{'is-active': (showMeta &amp;&amp; !showDoomsday)}" style="">
@@ -809,7 +810,7 @@
 
   <div class="intro-titles" ng-class="{'is-active': !showPreviewTitle, 'is-done': introEnded}" style="">
     <div class="title title--by" ng-class="{'is-active': activeTitle == 0 || activeTitle == 1}">
-      <img src="http://bearsears.patagonia.com/assets/icons/patagonia_logo.svg" alt="Patagonia">Presents
+      <img src="/assets/icons/patagonia_logo.svg" alt="Patagonia">Presents
       <div class="title--sub" ng-class="{'is-active': activeTitle == 1}">
         Powered By Technology From <img src="http://bearsears.patagonia.com/assets/icons/google_logo.svg" alt="Google">
       </div>
@@ -869,7 +870,7 @@
         <div class="credits-column">
           <div class="credits-group">
             <strong>Presented By</strong>
-            <p><a target="_blank" class="credits-imagelink" href="http://patagonia.com"><img class="credits-logo" src="http://bearsears.patagonia.com/assets/icons/patagonia_logo.svg" alt="Patagonia"></a></p>
+            <p><a target="_blank" class="credits-imagelink" href="http://patagonia.com"><img class="credits-logo" src="/assets/icons/patagonia_logo.svg" alt="Patagonia"></a></p>
           </div>
 
           <div class="credits-group">
@@ -966,7 +967,7 @@
     <script src="./assets/js/videojs-panorama.v5.min.js"></script>
     <script src="./assets/js/KmlMapParser.js"></script>
     <script src="./assets/js/app.js?cache=1511322399"></script>
-  
+
 
 <div id="breakpoints"></div>
 <div style="position: absolute; left: 0px; top: -2px; height: 1px; overflow: hidden; visibility: hidden; width: 1px;"><span style="position: absolute; font-size: 300px; width: auto; height: auto; margin: 0px; padding: 0px; font-family: Roboto, Arial, sans-serif;">BESbswy</span></div></body></html>

@@ -2259,7 +2259,7 @@ header {
     z-index: 10; }
   header .logo,
   header .logo img {
-    height: 27px; }
+    height: 38px; }
   header .menu-home {
     display: none; }
     header .menu-home.is-visible {
@@ -2580,7 +2580,7 @@ header {
       .intro-video--preview.is-done {
         display: none; }
     .intro-video::before {
-      background: url("../assets/intro_bg.jpg") center/cover no-repeat;
+      background: url("/assets/intro_bg.jpg") center/cover no-repeat;
       bottom: 0;
       content: '';
       display: block;
@@ -4794,7 +4794,7 @@ header {
     transition: 1s;
     z-index: 5; }
     .overlay--play::before {
-      background: url("../assets/intro_bg.jpg") center/cover no-repeat;
+      background: url("assets/intro_bg.jpg") center/cover no-repeat;
       bottom: 0;
       content: '';
       display: block;
@@ -5182,7 +5182,7 @@ header {
         letter-spacing: 0;
         text-transform: none; }
     .takeaction .takeaction--callout .takeaction-bg {
-      background: url("../assets/takeaction/takeaction-background.jpg") center center no-repeat;
+      background: url("/assets/takeaction/takeaction-background.jpg") center center no-repeat;
       background-size: cover;
       height: 100%;
       overflow: hidden;
