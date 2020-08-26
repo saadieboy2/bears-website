@@ -2088,9 +2088,9 @@ section.credits {
       opacity: 1;
       transform: none; }
     section.credits .overlay-number {
-      font-size: 10em;
-      left: 111px;
-      top: -77px; }
+      font-size: 8em;
+      left: 127px;
+      top: -37px; }
       @media only screen and (max-width: 768px) {
         section.credits .overlay-number {
           display: none; } }
@@ -2138,7 +2138,7 @@ section.credits {
           section.credits .credits-group p a.credits-imagelink::after {
             display: none; }
     section.credits .credits-logo {
-      max-width: 136px;
+      max-width: 90px;
       width: 70%; }
 
 .controls-drag-instruction {
